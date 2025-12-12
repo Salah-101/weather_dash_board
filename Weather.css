@@ -1,0 +1,359 @@
+/* ====================================
+   Main Weather Container Styles
+   ==================================== */
+
+/* Main weather component container */
+.weather{
+    /* Center the weather card in the parent container */
+    place-self: center;
+    
+    /* Add internal spacing around content */
+    padding: 40px;
+    
+    /* Round the corners of the container */
+    border-radius: 10px;
+    
+    /* Create gradient background from purple-blue to deep purple */
+    background-image: linear-gradient(45deg, #2f4680, #500ae4);
+    
+    /* Use flexbox for layout */
+    display: flex;
+    
+    /* Stack children vertically */
+    flex-direction: column;
+    
+    /* Center items horizontally */
+    align-items: center;
+}
+
+/* ====================================
+   Search Bar Styles
+   ==================================== */
+
+/* Container for search input and button */
+.search-bar{
+    /* Use flexbox for horizontal layout */
+    display: flex;
+    
+    /* Vertically center items */
+    align-items: center;
+    
+    /* Add space between input and search icon */
+    gap: 12px;
+}
+
+/* Search input field styling */
+.search-bar input{
+    /* Set height of input field */
+    height: 50px;
+    
+    /* Remove default browser border */
+    border: none;
+    
+    /* Remove focus outline */
+    outline: none;
+    
+    /* Make input fully rounded on sides */
+    border-radius: 40px;
+    
+    /* Add left padding so text doesn't touch edge */
+    padding-left: 25px;
+    
+    /* Text color inside input */
+    color: #626262;
+    
+    /* Light cyan background for input */
+    background: #ebfffc;
+    
+    /* Set text size */
+    font-size: 18px;
+}
+
+/* Search icon/button styling */
+.search-bar img{
+    /* Set width of search icon */
+    width: 50px;
+    
+    /* Add padding around icon */
+    padding: 15px;
+    
+    /* Make icon perfectly circular */
+    border-radius: 50%;
+    
+    /* Match input background color */
+    background: #ebfffc;
+    
+    /* Change cursor to pointer on hover to indicate clickable */
+    cursor: pointer;
+}
+
+/* ====================================
+   Weather Display Styles
+   ==================================== */
+
+/* Main weather icon (cloud, sun, rain, etc.) */
+.weather-icon{
+    /* Set icon width */
+    width: 150px;
+    
+    /* Add top and bottom margin for spacing */
+    margin: 30px 0;
+}
+
+/* Temperature display text */
+.temperature{
+    /* White text color */
+    color: #fff;
+    
+    /* Large text for emphasis */
+    font-size: 80px;
+    
+    /* Reduce line height to prevent extra spacing */
+    line-height: 1;
+}
+
+/* Location/city name display */
+.location{
+    /* White text color */
+    color: #fff;
+    
+    /* Medium-large text size */
+    font-size: 40px;
+}
+
+/* ====================================
+   Weather Data Details (Humidity & Wind)
+   ==================================== */
+
+/* Container for humidity and wind speed data */
+.weather-data{
+    /* Take full width of parent */
+    width: 100%;
+    
+    /* Add top margin for spacing from temperature */
+    margin-top: 40px;
+    
+    /* White text color for all data */
+    color: #fff;
+    
+    /* Use flexbox for layout */
+    display: flex;
+    
+    /* Space items evenly with maximum distance between them */
+    justify-content: space-between;
+}
+
+/* Individual column for each data item (humidity or wind) */
+.weather-data .col{
+    /* Use flexbox for icon and text layout */
+    display: flex;
+    
+    /* Align items to top of container */
+    align-items: flex-start;
+    
+    /* Space between icon and text */
+    gap: 12px;
+    
+    /* Set main text size */
+    font-size: 22px;
+}
+
+/* Label text below main value (e.g., "Humidity", "Wind Speed") */
+.weather-data .col span{
+    /* Make span take full width (stack vertically) */
+    display: block;
+    
+    /* Smaller text for labels */
+    font-size: 16px;
+}
+
+/* Icons for humidity and wind speed */
+.weather-data .col img{
+    /* Set icon width */
+    width: 26px;
+    
+    /* Add top margin to align with text */
+    margin-top: 10px;
+}
+
+/* ====================================
+   History Button (Simple Style)
+   ==================================== */
+
+/* Button to show/hide search history */
+.history-toggle-btn {
+    /* Add top spacing from weather data */
+    margin-top: 20px;
+    
+    /* Internal button spacing (top-bottom, left-right) */
+    padding: 12px 30px;
+    
+    /* Light cyan background */
+    background: #ebfffc;
+    
+    /* Dark text color */
+    color: #2f4680;
+    
+    /* Remove default button border */
+    border: none;
+    
+    /* Round button corners */
+    border-radius: 25px;
+    
+    /* Set text size */
+    font-size: 16px;
+    
+    /* Make text bold */
+    font-weight: bold;
+    
+    /* Change cursor to pointer */
+    cursor: pointer;
+}
+
+/* Button hover effect (when mouse is over it) */
+.history-toggle-btn:hover {
+    /* Slightly darker background on hover */
+    background: #d0f5f0;
+}
+
+/* ====================================
+   History Box (Simple Style)
+   ==================================== */
+
+/* Main container for history section */
+.history-box {
+    /* Take full width */
+    width: 100%;
+    
+    /* Add spacing above */
+    margin-top: 30px;
+    
+    /* Internal spacing */
+    padding: 20px;
+    
+    /* White background with slight transparency */
+    background: rgba(255, 255, 255, 0.15);
+    
+    /* Round corners */
+    border-radius: 15px;
+}
+
+/* History title */
+.history-box h3 {
+    /* Light cyan text color */
+    color: #ebfffc;
+    
+    /* Title text size */
+    font-size: 24px;
+    
+    /* Space below title */
+    margin-bottom: 20px;
+    
+    /* Center the text */
+    text-align: center;
+}
+
+/* ====================================
+   History List (Simple Style)
+   ==================================== */
+
+/* Container that holds all history cards */
+.history-list {
+    /* Maximum height before scrolling appears */
+    max-height: 400px;
+    
+    /* Enable vertical scrolling if content is too tall */
+    overflow-y: auto;
+}
+
+/* ====================================
+   Individual History Card (Simple Style)
+   ==================================== */
+
+/* Single history record card */
+.history-card {
+    /* White background with transparency */
+    background: rgba(255, 255, 255, 0.2);
+    
+    /* Internal spacing */
+    padding: 15px;
+    
+    /* Round corners */
+    border-radius: 10px;
+    
+    /* Space below each card */
+    margin-bottom: 15px;
+}
+
+/* Hover effect on history card */
+.history-card:hover {
+    /* More visible background on hover */
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* City name inside history card */
+.city-name {
+    /* White text */
+    color: #fff;
+    
+    /* Medium text size */
+    font-size: 18px;
+    
+    /* Make it bold */
+    font-weight: bold;
+    
+    /* Small space below */
+    margin-bottom: 8px;
+}
+
+/* Date and time text */
+.date-time {
+    /* Light white with transparency */
+    color: rgba(255, 255, 255, 0.7);
+    
+    /* Small text size */
+    font-size: 12px;
+    
+    /* Small space below */
+    margin-bottom: 10px;
+}
+
+/* Weather information line (temp, humidity, wind) */
+.weather-info {
+    /* White text */
+    color: #fff;
+    
+    /* Small-medium text size */
+    font-size: 14px;
+}
+
+/* ====================================
+   No History Message
+   ==================================== */
+
+/* Message shown when history is empty */
+.no-history {
+    /* Light white with transparency */
+    color: rgba(255, 255, 255, 0.7);
+    
+    /* Center the text */
+    text-align: center;
+    
+    /* Internal spacing */
+    padding: 20px;
+    
+    /* Medium text size */
+    font-size: 16px;
+}
+
+/* ====================================
+   Responsive Design for Mobile
+   ==================================== */
+
+/* Adjustments for screens smaller than 768px (tablets and phones) */
+@media (max-width: 768px) {
+    /* Make history list shorter on mobile */
+    .history-list {
+        max-height: 300px;
+    }
+}
